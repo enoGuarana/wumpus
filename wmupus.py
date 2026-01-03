@@ -11,15 +11,9 @@ genai.configure(api_key=MINHA_CHAVE)
 # --- 1. O MUNDO (SIMULADOR) ---
 class WumpusWorld:
     def __init__(self):
-        # Grid 4x4: (x,y)
+        # Grid 4x4: (x,y) FAZER WUMPUS GERAR CAMPO ALEATORIO
         # S=Seguro, P=Poço, W=Wumpus, O=Ouro
-        self.grid = {
-            (1,1): "S", (1,2): "S", (1,3): "W", (1,4): "S",
-            (2,1): "S", (2,2): "S", (2,3): "S", (2,4): "P",
-            (3,1): "P", (3,2): "S", (3,3): "O", (3,4): "S",
-            (4,1): "S", (4,2): "S", (4,3): "S", (4,4): "S"
-        }
-        self.agent_pos = (1,1)
+        
 
     def get_sensors(self):
         """Retorna o que o agente sente na posição atual"""
